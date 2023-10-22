@@ -693,7 +693,6 @@ a:hover{
 
 .glowing {
   position: relative;
-  min-width: 700px;
   margin: -150px;
   transform-origin: right;
   animation: colorChange 5s linear infinite;
