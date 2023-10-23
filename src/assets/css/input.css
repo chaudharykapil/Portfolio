@@ -4,6 +4,7 @@
 
 body{
   font-family: kanit;
+  
 }
 
 nav > a{
@@ -22,118 +23,63 @@ a:hover{
 
 
   
-  .glowing {
-    position: relative;
-    max-width: 100vw;
-    margin: 50px;
-    transform-origin: right;
-    animation: colorChange 5s linear infinite;
+.particles {
+  position: absolute;
+  display: flex;
+  z-index: 1;
+  padding: 0 10px;
+  z-index: 5;
+}
+
+.particles span {
+  position: relative;
+  bottom: 30px;
+  width: 30px;
+  height: 30px;
+  background: #7edd90;
+  box-shadow: 0 0 0 10px #7edd9044, 0 0 50px #7edd90, -100px 0 #475c9a99,
+    100px 0 #475c9a99;
+  margin: 0 4px;
+  border-radius: 50%;
+  animation: animate calc(190s / var(--i)) ease infinite;
+}
+
+.particles span:nth-child(2n) {
+  background: #475c9a;
+  box-shadow: 0 0 0 10px #475c9a44, 0 0 50px #475c9a, -100px 0 #7edd9099,
+    100px 0 #7edd9099;
+}
+
+.particles span:nth-child(3n) {
+  background: #9a4772;
+  box-shadow: 0 0 0 10px #9a477244, 0 0 50px #9a4772, -100px 0 #7edd9099,
+    100px 0 #7edd9099;
+}
+
+@keyframes animate {
+  0% {
+    transform: translateY(120vh) scale(0) rotate(180deg);
   }
-  
-  .glowing:nth-child(even) {
-    transform-origin: right;
+
+  20% {
+    transform: translateY(100vh) scale(1) rotate(0deg);
   }
-  
-  @keyframes colorChange {
-    0% {
-      filter: hue-rotate(0deg);
-      transform: rotate(0deg);
-    }
-    100% {
-      filter: hue-rotate(360deg);
-      transform: rotate(360deg);
-    }
+
+  100% {
+    transform: translateY(-120vh) scale(0.5) rotate(360deg);
   }
-  
-  .glowing span {
-    position: absolute;
-    top: calc(80 * var(--i));
-    left: calc(80px * var(--i));
-    bottom: calc(80px * var(--i));
-    right: calc(80px * var(--i));
-  }
-  
-  .glowing span::before {
-    content: "";
-    position: absolute;
-    top: 50%;
-    right: 400px;
-    width: 15px;
-    height: 15px;
-    background: #f00;
-    border-radius: 50%;
-  }
-  
-  .glowing span:nth-child(3n + 1)::before {
-    background: rgba(134,255,0,1);
-    box-shadow: 0 0 20px rgba(134,255,0,1),
-      0 0 40px rgba(134,255,0,1),
-      0 0 60px rgba(134,255,0,1),
-      0 0 80px rgba(134,255,0,1),
-      0 0 0 8px rgba(134,255,0,.1);
-  }
-  
-  .glowing span:nth-child(3n + 2)::before {
-    background: rgba(255,214,0,1);
-    box-shadow: 0 0 20px rgba(255,214,0,1),
-      0 0 40px rgba(255,214,0,1),
-      0 0 60px rgba(255,214,0,1),
-      0 0 80px rgba(255,214,0,1),
-      0 0 0 8px rgba(255,214,0,.1);
-  }
-  
-  .glowing span:nth-child(3n + 3)::before {
-    background: rgba(0,226,255,1);
-    box-shadow: 0 0 20px rgba(0,226,255,1),
-      0 0 40px rgba(0,226,255,1),
-      0 0 60px rgba(0,226,255,1),
-      0 0 80px rgba(0,226,255,1),
-      0 0 0 8px rgba(0,226,255,.1);
-  }
-  
-  .glowing span:nth-child(3n + 1) {
-    animation: animate-reverse 10s alternate infinite;
-  }
-  
-  .glowing span:nth-child(3n + 2) {
-    animation: animate 3s alternate infinite;
-  }
-  
-  .glowing span:nth-child(3n + 3) {
-    animation: animate-reverse 8s alternate infinite; 
-  }
-  
-  @keyframes animate {
-    0% {
-      transform: rotate(180deg);
-    }
-    50% {
-      transform: rotate(0deg);
-    }
-    100% {
-      transform: rotate(360deg);
-    }
-  }
-  
-  @keyframes animate-reverse {
-    0% {
-      transform: rotate(360deg);
-    }
-    
-    50% {
-      transform: rotate(180deg);
-    }
-    
-    100% {
-      transform: rotate(0deg);
-    }
-  }
-  
+}
 
 
-
-
-
+@media (max-width: 800px) {
+   main {
+    padding: 0 0;
+  }
+  
+  .swiper {
+    max-width: 650px;
+  }
+}
 
 
 @font-face {
