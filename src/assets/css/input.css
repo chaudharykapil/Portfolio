@@ -2,7 +2,11 @@
 @tailwind components;
 @tailwind utilities;
 
-a{
+body{
+  font-family: kanit;
+}
+
+nav > a{
     margin-left: 2rem;
     font-size: 1rem;
     transition-property: text, line;
@@ -15,15 +19,19 @@ a:hover{
     color: rgb(20 ,184 ,166)
 }
 
+
+
+  
   .glowing {
     position: relative;
-    margin: -150px;
+    max-width: 100vw;
+    margin: 50px;
     transform-origin: right;
     animation: colorChange 5s linear infinite;
   }
   
   .glowing:nth-child(even) {
-    transform-origin: left;
+    transform-origin: right;
   }
   
   @keyframes colorChange {
@@ -39,7 +47,7 @@ a:hover{
   
   .glowing span {
     position: absolute;
-    top: calc(80px * var(--i));
+    top: calc(80 * var(--i));
     left: calc(80px * var(--i));
     bottom: calc(80px * var(--i));
     right: calc(80px * var(--i));
@@ -49,7 +57,7 @@ a:hover{
     content: "";
     position: absolute;
     top: 50%;
-    left: -8px;
+    right: 400px;
     width: 15px;
     height: 15px;
     background: #f00;
@@ -84,15 +92,15 @@ a:hover{
   }
   
   .glowing span:nth-child(3n + 1) {
-    animation: animate 10s alternate infinite;
+    animation: animate-reverse 10s alternate infinite;
   }
   
   .glowing span:nth-child(3n + 2) {
-    animation: animate-reverse 3s alternate infinite;
+    animation: animate 3s alternate infinite;
   }
   
   .glowing span:nth-child(3n + 3) {
-    animation: animate 8s alternate infinite; 
+    animation: animate-reverse 8s alternate infinite; 
   }
   
   @keyframes animate {

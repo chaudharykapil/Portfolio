@@ -1,0 +1,18 @@
+{
+    "projects":[
+        {
+            "name":"Project 1",
+            "description":"lorumipsum",
+            "tech":["Python","HTML","CSS","JS"],
+            "github":"",
+            "product-link":""
+        },
+        {},
+        {},
+        {},
+        {},
+        {},
+        {}
+
+    ]
+}
