@@ -1,8 +1,8 @@
 
 function projcard(project){
     return `
-    <div class="h-72 m-5 rounded-md shadow-sm p-5 shadow-slate-950 flex flex-row">
-        <div class="flex w-3/4 justify-start items-start flex-col">
+    <div class="h-80 m-5 rounded-md shadow-sm p-5 shadow-slate-950 flex flex-row">
+        <div class="flex w-3/5 justify-start items-start flex-col">
             <p class="text-2xl text-green-600 font-bold font-[nosifer]">${project["title"]}</p>
             <p class=" my-4 text-lg">${project["description"]}</p>
             <div class="w-full items-center flex flex-row">
@@ -13,8 +13,8 @@ function projcard(project){
                 <a href="${project["github"]}" class="text-green-600 hover:underline my-auto">Website</a>
             </div>
         </div>
-        <div class="flex w-1/4 ">
-            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRwVm-ndjr9s251Ng0RE_LOsY7lgmd1coVp_1OlCC6M&s" width=100% height=100% alt="">
+        <div class="flex w-2/5 ">
+            <img src="./assets/screenshots/${project["image"]}" alt="" >
         </div>
     </div>
 `
