@@ -47,6 +47,14 @@ const allprojects = {
             github:"",
             website:"",
             image:"ToDoApp/1.jpeg"
+        },
+        {
+            title:"Arogya App",
+            description:"Arogya app is an initiative to promote Ayruvedic medicine.",
+            skills:['Flutter','Dart','Python','Tensorflow','Flask','RestAPI','Figma',"Machine Learning"],
+            github:"https://github.com/chaudharykapil/Arogya_app",
+            website:"",
+            image:"Arogya/1.jpg"
         }
     ]
 }
