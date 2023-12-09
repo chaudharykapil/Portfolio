@@ -14,7 +14,7 @@ function projcard(project){
             </div>
         </div>
         <div class="flex w-2/5 ">
-            <img src="./assets/screenshots/${project["image"]}" alt="" >
+            
         </div>
     </div>
 `
