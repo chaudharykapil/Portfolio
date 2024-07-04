@@ -6,7 +6,7 @@ export default function ProjectSections({id}) {
   return (
     <div className='min-h-screen w-full flex flex-col gap-y-12' id={id}>
         <div className='self-center text-5xl font-oswald'>Projects</div>
-        <div className='grid grid-cols-3 w-full gap-10'>
+        <div className='grid grid-cols-1 md:grid-cols-3 w-full gap-10'>
           {
             projects.map((p)=>{
               return <ProjectCard

@@ -10,7 +10,7 @@ import ExprienceSection from './components/ExprienceSections'
 export default function HomeScreen() {
   
   return (
-    <div className='pb-10'>
+    <div className=' pb-10 flex flex-col items-center w-full'>
         <MoonBg />
         <StarBG />
         <Header/>
