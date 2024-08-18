@@ -3,7 +3,7 @@ import ExprerinceCard from './ExprerinceCard'
 
 function VerticleLine() {
   return (
-    <div className='-z-10 h-[88%] absolute left-1/2 hidden md:block'>
+    <div className='-z-10 h-full absolute left-1/2 hidden md:block'>
       <div className='h-full w-px bg-slate-500'></div>
     </div>
   )
@@ -34,7 +34,16 @@ export default function ExprienceSection({id}) {
             <span class="icon-[carbon--condition-point]"></span>
           </div>
           <div className='h-80 flex-1'>
-            
+          </div>
+        </div>
+        <div className='flex flex-col md:flex-row  justify-between w-full px-20'>
+          <div className='h-80 flex-1'>
+            <ExprerinceCard title="Javascript Developer" orgname="Softcode Technologies" place="Remote" position="Junior Developer" startdate="Aug' 2024" enddate="Feb' 2025"  />
+          </div>
+          <div className='h-80 hidden md:flex justify-center items-center'>
+            <span class="icon-[carbon--condition-point]"></span>
+          </div>
+          <div className='h-80 flex-1'>
           </div>
         </div>
       </div>
